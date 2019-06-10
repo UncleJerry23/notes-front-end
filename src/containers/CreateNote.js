@@ -27,7 +27,6 @@ class CreateNote extends PureComponent {
 
     render() {
       const { title, body } = this.state;
-
       return (
       <>
         <Form title={title} body={body} handleSubmit={this.handleSubmit} handleChange={this.handleChange} />
