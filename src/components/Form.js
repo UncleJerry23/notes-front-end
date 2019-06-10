@@ -2,28 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function NoteDForm({ title, body, handleSubmit, handleChange }) {
-  const formStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'start'
-  };
-
-  const buttonStyle = {
-    width: '80px',
-    margin: '10px'
-  };
-
-  const titleInput = {
-    width: '225px',
-    textAlign: 'center',
-    margin: '10px'
-  };
-
-  const bodyInput = {
-    height: '200px',
-    width: '400px',
-    margin: '10px'
-  }
 
   return (
     <form onSubmit={handleSubmit} style={formStyle}>
@@ -43,3 +21,26 @@ NoteDForm.propTypes = {
 };
 
 export default NoteDForm;
+
+const formStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'start'
+};
+
+const buttonStyle = {
+  width: '80px',
+  margin: '10px'
+};
+
+const titleInput = {
+  width: '225px',
+  textAlign: 'center',
+  margin: '10px'
+};
+
+const bodyInput = {
+  height: '200px',
+  width: '400px',
+  margin: '10px'
+};

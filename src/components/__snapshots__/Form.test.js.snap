@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component renders a Form 1`] = `
+<form
+  onSubmit={[MockFunction]}
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "start",
+    }
+  }
+>
+  <button
+    style={
+      Object {
+        "margin": "10px",
+        "width": "80px",
+      }
+    }
+  >
+    Submit
+  </button>
+  <input
+    name="title"
+    onChange={[MockFunction]}
+    placeholder="Note Title"
+    style={
+      Object {
+        "margin": "10px",
+        "textAlign": "center",
+        "width": "225px",
+      }
+    }
+    type="text"
+    value=""
+  />
+  <textarea
+    name="body"
+    onChange={[MockFunction]}
+    placeholder="Note Body"
+    style={
+      Object {
+        "height": "200px",
+        "margin": "10px",
+        "width": "400px",
+      }
+    }
+    value=""
+  />
+</form>
+`;
