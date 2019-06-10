@@ -1,5 +1,5 @@
 export const createNote = note => {
-  return fetch('https://git.heroku.com/notes-for-dayz.git', {
+  return fetch('https://notes-for-dayz.herokuapp.com/api/v1/notes', {
     method: 'POST',
     body: JSON.stringify(note),
     headers:{
@@ -13,7 +13,7 @@ export const createNote = note => {
 };
 
 export const getAllNotes = () => {
-  return fetch('https://git.heroku.com/notes-for-dayz.git', {
+  return fetch('https://notes-for-dayz.herokuapp.com/api/v1/notes', {
     method: 'GET',
     headers:{
       'Content-Type': 'application/json'
