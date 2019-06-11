@@ -1,28 +1,4 @@
-export const createNote = note => {
-  return fetch('https://notes-for-dayz.herokuapp.com/api/v1/notes', {
-  // return fetch('http://localhost:7891/api/v1/notes', {
-    method: 'POST',
-    body: JSON.stringify(note),
-    headers:{
-      'Content-Type': 'application/json'
-    } })
-    .then(res => ([res.ok, res.json()]))
-    .then(([ok, json]) => {
-      if(!ok) throw 'Unable to fetch';
-      return json;
-    });
-};
+import { post, get } from './request';
 
-export const fetchAllNotes = () => {
-  return fetch('https://notes-for-dayz.herokuapp.com/api/v1/notes', {
-  // return fetch('http://localhost:7891/api/v1/notes', {
-    method: 'GET',
-    headers:{
-      'Content-Type': 'application/json'
-    } })
-    .then(res => ([res.ok, res.json()]))
-    .then(([ok, json]) => {
-      if(!ok) throw 'Unable to fetch';
-      return json;
-    });
-};
+export const createNote = note => post('/api/v1/notes', note);
+export const fetchAllNotes = () => get('/api/v1/notes');
